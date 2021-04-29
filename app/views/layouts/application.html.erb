@@ -12,6 +12,38 @@
 </head>
 
   <body>
+
+  <header>
+      <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <h1>
+            <%= link_to 'Members', root_path, class:"navbar-brand" %>
+          </h1>
+          
+          <% if user_signed_in? %>  
+           <ul class="d-flex justify-content-end list-style-none">
+            <li class= 'nav-item btn btn-light mx-2' >
+              <%= link_to current_user.name, edit_user_registration_path, class: 'text-decoration-none' %>
+            </li>
+            <li class= 'nav-item btn btn-light' >
+                <%= link_to "Log Out", destroy_user_session_path ,method: :delete, class: 'text-decoration-none' %>
+            </li>
+          </ul>
+          <% else %>
+          <ul class="d-flex justify-content-end list-style-none">
+            <li class= 'nav-item btn btn-light mx-2' >
+              <%= link_to "Log in", new_user_session_path, class: 'text-decoration-none' %>
+            </li>
+            <li class= 'nav-item btn btn-light' >
+            <%= link_to "Sign up", new_user_registration_path , class: 'text-decoration-none' %>
+            </li>
+          </ul>
+           <%end%>
+             
+        </div>
+       </nav>
+    </header>   
+
     <%= yield %>
   </body>
 </html>
