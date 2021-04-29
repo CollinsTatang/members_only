@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  #before_action :set_post, only: %i[ show edit update destroy ]
-  before_action :authenticate_user!, #only: %i[new create edit]
+  before_action :set_post, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, except: %i[index show]
 
   # GET /posts or /posts.json
   def index
@@ -13,17 +13,16 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    @post = Post.new
+    @post = current_user.posts.build
   end
 
   # GET /posts/1/edit
   def edit
-    @post = post.find(params[:id])
   end
 
   # POST /posts or /posts.json
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.build(post_params)
 
     respond_to do |format|
       if @post.save
