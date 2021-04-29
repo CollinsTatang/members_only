@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: %i[new create edit]
   #before_action :set_post, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, #only: %i[new create edit]
 
   # GET /posts or /posts.json
   def index
@@ -18,6 +18,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    @post = post.find(params[:id])
   end
 
   # POST /posts or /posts.json
@@ -26,7 +27,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to new_posts_path, notice: "Post was successfully created." }
+        format.html { redirect_to new_post_path, notice: "Post was successfully created." }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new, status: :unprocessable_entity }
