@@ -1,0 +1,23 @@
+<div class="container-fluid ">
+<div class="row row-cols-1 row-cols-md-3 g-4"" > 
+
+  
+<% @posts.each do |post| %>
+  <div class="col my-2 ">
+    <div class="card text-white bg-dark h-100">
+      <div class="card-header card-title">
+      <h5>Log in to join the Conversation!</h5>
+      </div>
+        <div class="card-body text-dark bg-light">
+          <h5 class="card-title">Title: <%= post.title %></h5>
+          <hr>
+          <p class="card-text lead"><%= post.body %></p>
+        </div>
+        <div class="card-footer">
+        <h6>Welcome to Members</h6>
+        </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+</div>
