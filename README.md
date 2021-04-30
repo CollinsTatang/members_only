@@ -2,7 +2,7 @@
 
 # Members Only
 
-> Built with Ruby on Rails with more emphasis on ActiveRecord 
+> Built with Ruby on Rails with more emphasis on Sessions and Authentications
 
 
 Additional description about the project and its features.
