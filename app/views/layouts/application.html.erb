@@ -14,28 +14,32 @@
   <body>
 
   <header>
-      <nav class="navbar navbar-dark bg-dark">
-        <div class="container-fluid">
-          <h1>
-            <%= link_to 'Members', root_path, class:"navbar-brand" %>
-          </h1>
-          
-          <% if user_signed_in? %>  
-           <ul class="d-flex justify-content-end list-style-none">
-            <li class= 'nav-item btn btn-light mx-2' >
-              <%= link_to current_user.name, edit_user_registration_path, class: 'text-decoration-none' %>
+      <nav class="navbar navbar-expand-md navbar-dark bg-secondary fixed-top justify-content-center">
+      <div class="navbar-brand ">
+        <%= link_to 'MEMBERS', root_path %>
+      </div>
+      <% if user_signed_in? %> 
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+           <ul class="navbar-nav ">
+            <li class= "nav-item btn btn-light nav-link" >
+             <%= link_to current_user.name, edit_user_registration_path %>
             </li>
-            <li class= 'nav-item btn btn-light' >
-                <%= link_to "Log Out", destroy_user_session_path ,method: :delete, class: 'text-decoration-none' %>
+            <li class= "nav-item btn btn-light nav-link" >
+                <%= link_to "Log Out", destroy_user_session_path ,method: :delete %>
             </li>
-          </ul>
+
           <% else %>
-          <ul class="d-flex justify-content-end list-style-none">
-            <li class= 'nav-item btn btn-light mx-2' >
-              <%= link_to "Log in", new_user_session_path, class: 'text-decoration-none' %>
+          
+          <li class= "nav-item nav-link" >
+             <%= link_to "Log in", new_user_session_path %>
             </li>
-            <li class= 'nav-item btn btn-light' >
-            <%= link_to "Sign up", new_user_registration_path , class: 'text-decoration-none' %>
+         
+          
+            <li class= "nav-item  nav-link" >
+            <%= link_to "Sign up", new_user_registration_path  %>
             </li>
           </ul>
            <%end%>
@@ -45,5 +49,71 @@
     </header>   
 
     <%= yield %>
+
+    <footer>
+    <div class="container footers-menu">
+      <div class="d-flex justify-content-center pt-3 pb-3">
+        <a href="#" class="nav-link text-light">HOME</a>
+        
+          <a href="#" class="nav-link text-light">SEARCH</a>
+        
+          <a href="#" class="nav-link text-light">ABOUT US</a>
+       
+          <a href="#" class="nav-link text-light">ADVERTISE</a>
+        
+          <i class="bi bi-geo-alt h2 text-light"></i>
+        
+          <a href="#" class="nav-link text-light">FACEBOOK</a>
+        
+          <a href="#" class="nav-link text-light">TWITTER</a>
+        
+          <a href="#" class="nav-link text-light">BLOG</a>
+        
+          <a href="#" class="nav-link text-light">GOOGLE+</a>
+        
+      </div>  
+    </div>
+      
+    </div>
+    <div class="container">
+      <div class="row text-center text-light">
+        <div class="col-md-4 ">
+          <p class="h4 pb-2"><strong>SUBSCRIBE</strong></p>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="you@gmail.com">
+            <div class="input-group-append">
+              <button class="btn btn-dark" type="button">Send</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <p class="h4"><strong>CONTACT</strong></p>
+          <p class="lead">It is a long established fact more-or-
+            <span style="color: red;">tatangtech@gmail.com</span></p>
+        </div>
+        <div class="col-md-4">
+          <p class="h4"><strong>ABOUT</strong></p>
+          <p class="lead">It is a long established fact that a reader will be distracted by the readable The point of <span style="color: red;">Learn more...</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid bg2">
+      <div class="row pt-1">
+        <div class="col-md-6">
+          <a href="#" class="text-light"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-light"> <i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-whatsapp"></i></a>          
+        </div>
+        <div class="col-md-3">
+          <a href="#" class="text-light"><i class="bi bi-house-fill">Take home massage <span id="mg">Collins Tatang</span></i></a>
+        </div>
+        <div class="col-md-3">
+          <a href="#" class="text-light"><i class="bi bi-house-fill">Take home massage <span id="mg">Makungong</span></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
   </body>
 </html>

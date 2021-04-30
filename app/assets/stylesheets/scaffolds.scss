@@ -14,14 +14,13 @@ pre {
   font-size: 11px; }
 
 a {
-  color: #000; }
+  color: #000;
+  text-decoration: none;
+ }
 
 a:visited {
   color: #666; }
 
-a:hover {
-  color: #fff;
-  background-color: #000; }
 
 th {
   padding-bottom: 5px; }
@@ -63,3 +62,14 @@ div.actions {
 
 label {
   display: block; }
+
+  footer {
+    background-color: black;
+}
+
+.bg2 {
+    background-color: rgb(47, 50, 53);
+}
+#mg {
+  color: blue;
+}
