@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
-<div class="container pb-4">
-  <div class="row">
+<div class="container pb-4 pt-4">
+  <div class="row pt-5">
     <% @posts.each do |post| %>
-    <div class="card col-md-4 bg-light" >
+    <div class="card col-md-4 " >
         <div class="card-body">
-          <h2 class="card-title h2">Latest Posts</h2>
+          <h2 class="card-title h2">Latest Post</h2>
           <h3 class="card-subtitle mb-2"><%= post.title %></h3>
            <p class="card-text lead"><%= post.body %></p>
            <%= link_to 'Show', new_post_path %>
