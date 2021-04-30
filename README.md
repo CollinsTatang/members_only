@@ -27,8 +27,6 @@ run ```bundle```
 
 run ```rails c ``` to open rails  console and be able to interact with the models.
 
-You can also ```require hirb``` in the console and run ```Hirb.enable``` to have a nice display of the data.
-
 ## Authors
 
 👤 **Olaoluwa Soladoye**
@@ -37,9 +35,11 @@ You can also ```require hirb``` in the console and run ```Hirb.enable``` to have
 - Twitter: [@Laoluwa](https://twitter.com/_laoluwa)
 - LinkedIn: [Olaoluwa](https://www.linkedin.com/in/olaoluwa-soladoye)
 
-👤 **Collins Tatang**
+👤 **Makungong Collins Tatang**
 
-- GitHub: [@Collins](https://github.com/CollinsTatang
+- GitHub: [@CollinsTatang](https://github.com/CollinsTatang)
+- Twitter: [@CollinsTatang1](https://twitter.com/CollinsTatang1)
+- LinkedIn: [makungong-collins](https://www.linkedin.com/in/makungong-collins-b43260190/)
 
 
 ## 🤝 Contributing
