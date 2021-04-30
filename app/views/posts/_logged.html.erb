@@ -13,16 +13,6 @@
           <hr>
           <p class="card-text lead"><%= post.body %></p>
         </div>
-        
-        <div class="card-footer">
-        <% if user_signed_in? && current_user.id == post.user_id %>
-          <small class="text-muted"> <span><%= link_to 'Edit', edit_post_path(post) %></span></small>
-          <small class="text-muted"> <span><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></span></small>
-           <% else %>
-          <p>Comments is disabled</p>
-           <% end %>
-        </div>
-       
     </div>
   </div>
   <% end %>

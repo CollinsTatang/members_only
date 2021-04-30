@@ -11,43 +11,8 @@
   <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 </head>
 
-  <body>
-
-  <!--<header>
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top ">
-      <div class="navbar-brand ">
-        <%= link_to 'MEMBERS', root_path %>
-      </div>
-      <% if user_signed_in? %> 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-           <ul class="navbar-nav ">
-            <li class= "nav-item  nav-link" >
-             <%= link_to current_user.name, edit_user_registration_path %>
-            </li>
-            <li class= "nav-item  nav-link" >
-                <%= link_to "Log Out", destroy_user_session_path ,method: :delete %>
-            </li>
-
-          <% else %>
-          
-          <li class= "nav-item nav-link" >
-             <%= link_to "Log in", new_user_session_path %>
-            </li>
-         
-          
-            <li class= "nav-item  nav-link" >
-            <%= link_to "Sign up", new_user_registration_path  %>
-            </li>
-          </ul>
-           <%end%>
-             
-        </div>
-       </nav>
-    </header>   
-    <header>-->
+  <body> 
+    <header>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <h1>
