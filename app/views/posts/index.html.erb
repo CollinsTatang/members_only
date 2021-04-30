@@ -1,29 +1,18 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="container pb-4">
+  <div class="row">
     <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.body %></td>
-        <td><%= link_to 'Show', new_post_path %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+    <div class="card col-md-4 bg-light" >
+        <div class="card-body">
+          <h2 class="card-title h2">Latest Posts</h2>
+          <h3 class="card-subtitle mb-2"><%= post.title %></h3>
+           <p class="card-text lead"><%= post.body %></p>
+           <%= link_to 'Show', new_post_path %>
+           <%= link_to 'Edit', edit_post_path(post) %>
+           <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+          <%= link_to 'New Post', new_post_path %>
+    </div>
+      <% end %>
+  </div>  
+</div>
